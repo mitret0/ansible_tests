@@ -6,3 +6,9 @@
       ansible.builtin.dnf:
         name: mariadb-server
         state: present
+
+    - name: enable/start the service
+      service:
+        name: mariadb
+        enabled: yes
+        state: started
