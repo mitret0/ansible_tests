@@ -16,4 +16,11 @@
       service:
         name: httpd
         enabled: yes
-        state: started    
+        state: restarted
+
+    - name: enable/start mod_wsgi
+      apache2_module:
+        name: mod_wsgi
+        state: present
+
+        
