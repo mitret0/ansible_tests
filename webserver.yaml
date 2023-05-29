@@ -33,7 +33,10 @@
       notify: restart httpd
 
     - name: setup python venv
-      pip: requirements=/war/www/demo/requirements.txt virtualenv=/var/www/demo/.venv
+      pip: 
+        requirements: /war/www/demo/requirements.txt 
+        virtualenv: /var/www/demo/.venv 
+        virtualenv_command: "/usr/bin/python3.6 -m 'venv'"
       notify: restart httpd
 
   handlers:
