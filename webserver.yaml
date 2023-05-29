@@ -9,4 +9,10 @@
         - httpd
         - mod_wsgi
         - python-pip
-        - python3-virtualenv 
+        - python3-virtualenv
+
+    - name: enable/start the service
+      service:
+        name: httpd
+        enabled: yes
+        state: started    
