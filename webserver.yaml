@@ -9,4 +9,4 @@
         - httpd
         - mod_wsgi
         - python-pip
-        - python-virtualenv 
+        - python3-virtualenv 
