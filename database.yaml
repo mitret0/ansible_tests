@@ -4,4 +4,5 @@
   tasks:
     - name: install msql-server
       ansible.builtin.dnf:
-        - name: mariadb-server
+        name: mariadb-server
+        state: present
