@@ -1,0 +1,6 @@
+---
+- hosts: database
+  tasks:
+    - name: install msql-server
+      ansible.builtin.dnf:
+        - name: mariadb-server
