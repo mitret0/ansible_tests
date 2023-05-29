@@ -1,0 +1,11 @@
+---
+# defaults file for register-rhel-subscription
+org_activationkey: "mitrekey"
+# tasks file for register-rhel-subscription
+# Register System and add Subcription
+- name: Register system and add subscription
+  redhat_subscription:
+    activationkey: "{{ org_activationkey }}"
+    org_id: 14467803
+    state: present
+    
