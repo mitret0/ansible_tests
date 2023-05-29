@@ -1,8 +1,0 @@
----
-- hosts: all
-  tasks:
-  - name: Register system and add subscription
-    redhat_subscription:
-      activationkey: "mitrekey"
-      org_id: 14467803
-      state: present  
