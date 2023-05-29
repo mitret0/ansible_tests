@@ -1,0 +1,12 @@
+---
+- hosts: webserver
+  become: true
+  tasks:
+    - name: install apache stuff
+      ansible.builtin.dnf:
+        name: {{ item }}
+      with_items:
+        - httpd
+        - mod_wsgi
+        - python-pip
+        - python-virtualenv 
