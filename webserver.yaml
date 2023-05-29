@@ -24,6 +24,10 @@
         state: present
       notify: restart httpd
 
+    - name: copy demo app source
+      copy: src=demo/app/ dest=/var/www/demo mode=0755
+      notify: restart httpd
+
   handlers:
     - name: restart httpd
       service:
