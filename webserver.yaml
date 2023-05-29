@@ -28,6 +28,10 @@
       copy: src=demo/app/ dest=/var/www/demo mode=0755
       notify: restart httpd
 
+    - name: copy httpd vhost conf
+      copy: src=demo/demo.conf dest=/etc/httpd/conf.d/ mode=0755
+      notify: restart httpd
+
   handlers:
     - name: restart httpd
       service:
