@@ -36,7 +36,7 @@
       pip: 
         requirements: /war/www/demo/requirements.txt 
         virtualenv: /var/www/demo/.venv 
-        virtualenv_command: "/usr/bin/python -m 'venv'"
+        virtualenv_command: "/usr/bin/python -m venv"
       notify: restart httpd
 
   handlers:
