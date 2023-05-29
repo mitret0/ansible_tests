@@ -1,6 +1,6 @@
 ---
 - hosts: loadbalancer
-- tasks:
+  tasks:
     - name: Install nginx
       ansible.builtin.dnf:
         name: nginx
