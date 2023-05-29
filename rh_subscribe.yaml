@@ -5,6 +5,6 @@
 # Register System and add Subcription
     -name: Register system and add subscription
      redhat_subscription:
-      activationkey: "mitrekey"
-      org_id: 14467803
-      state: present
+       activationkey: "mitrekey"
+       org_id: 14467803
+       state: present
