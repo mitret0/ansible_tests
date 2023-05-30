@@ -154,7 +154,7 @@
 # Reboots a system if any of the preceeding plays sets the 'insights_needs_reboot' variable to true.
 # The variable can be overridden to suppress this behavior.
 - name: Reboot system (if applicable)
-  hosts: "ans.virtu.lan"
+  hosts: "ans"
   become: true
   gather_facts: false
   vars:
@@ -202,7 +202,7 @@
           become: false
 
 - name: run insights
-  hosts: "ans.virtu.lan"
+  hosts: "ans"
   become: true
   gather_facts: false
   vars:
