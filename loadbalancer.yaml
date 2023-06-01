@@ -12,3 +12,17 @@
         name: nginx
         enabled: yes
         state: started
+
+    - name: configure nginx site
+      template:
+        src: templates/nginx.conf.j2
+        dest: /etc/nginx/default.d/demo
+        mode: 644
+        notify: restart nginx
+
+    - handlers:
+        - name: restart nginx
+          service:
+            name: nginx
+            enabled: yes
+            state: started
