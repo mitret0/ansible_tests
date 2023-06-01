@@ -20,9 +20,9 @@
         mode: 644
         notify: restart nginx
 
-  - handlers:
-      - name: restart nginx
-        service:
-          name: nginx
-          enabled: yes
-          state: started
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        enabled: yes
+        state: started
