@@ -18,7 +18,7 @@
         src: templates/nginx.conf.j2
         dest: /etc/nginx/default.d/demo
         mode: 644
-        notify: restart nginx
+      notify: restart nginx
 
   handlers:
     - name: restart nginx
